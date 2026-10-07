@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMotors - Venda de Carros</title>
+    
+    <!-- CSS Customizado (Rolagem Suave) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome para os Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Habilita o modo escuro
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#E63946', // Vermelho principal
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans">
+
+    <!-- Cabeçalho (Navbar) -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-brand uppercase tracking-wider">AutoMotors</a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#hero" class="hover:text-brand transition-colors">Início</a>
+                <a href="#destaques" class="hover:text-brand transition-colors">Estoque</a>
+                <a href="#sobre" class="hover:text-brand transition-colors">Sobre Nós</a>
+                <a href="#contato" class="hover:text-brand transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão de Dark Mode -->
+            <button id="theme-toggle" class="p-2 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                <i id="theme-icon" class="fas fa-moon text-gray-800 dark:text-gray-200 text-lg"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="hero" class="relative py-32 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-2xl bg-white/90 dark:bg-gray-900/90 p-10 rounded-xl shadow-2xl backdrop-blur-sm transition-colors duration-300">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">O carro dos seus sonhos está aqui.</h2>
+                <p class="text-lg mb-8 text-gray-800 dark:text-gray-300">Encontre as melhores ofertas em veículos novos e seminovos, revisados e com garantia de fábrica.</p>
+                <a href="#destaques" class="inline-block bg-brand hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg">
+                    Ver Veículos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Estoque (6 Carros) -->
+    <section id="destaques" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-wide">Nosso Estoque</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Carro 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&w=600&q=80" alt="Chevrolet Camaro" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Chevrolet Camaro SS</h3>
+                        <p class="text-brand font-bold text-2xl mb-4">R$ 450.000</p>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li><i class="fas fa-calendar-alt mr-2"></i> 2022/2023</li>
+                            <li><i class="fas fa-tachometer-alt mr-2"></i> 15.000 km</li>
+                        </ul>
+                        <button class="w-full bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white font-bold py-2 rounded hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-colors">Tenho Interesse</button>
+                    </div>
+                </div>
+
+                <!-- Carro 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mercedes C300" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mercedes-Benz C300</h3>
+                        <p class="text-brand font-bold text-2xl mb-4">R$ 380.000</p>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li><i class="fas fa-calendar-alt mr-2"></i> 2023/2023</li>
+                            <li><i class="fas fa-tachometer-alt mr-2"></i> 0 km</li>
+                        </ul>
+                        <button class="w-full bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white font-bold py-2 rounded hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-colors">Tenho Interesse</button>
+                    </div>
+                </div>
+
+                <!-- Carro 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&w=600&q=80" alt="Porsche Macan" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Porsche Macan</h3>
+                        <p class="text-brand font-bold text-2xl mb-4">R$ 520.000</p>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li><i class="fas fa-calendar-alt mr-2"></i> 2021/2022</li>
+                            <li><i class="fas fa-tachometer-alt mr-2"></i> 22.000 km</li>
+                        </ul>
+                        <button class="w-full bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white font-bold py-2 rounded hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-colors">Tenho Interesse</button>
+                    </div>
+                </div>
+
+                <!-- Carro 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?ixlib=rb-4.0.3&w=600&q=80" alt="Ford Mustang" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Ford Mustang GT</h3>
+                        <p class="text-brand font-bold text-2xl mb-4">R$ 410.000</p>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li><i class="fas fa-calendar-alt mr-2"></i> 2022/2022</li>
+                            <li><i class="fas fa-tachometer-alt mr-2"></i> 12.500 km</li>
+                        </ul>
+                        <button class="w-full bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white font-bold py-2 rounded hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-colors">Tenho Interesse</button>
+                    </div>
+                </div>
+
+                <!-- Carro 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BMW M3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">BMW M3 Competition</h3>
+                        <p class="text-brand font-bold text-2xl mb-4">R$ 680.000</p>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li><i class="fas fa-calendar-alt mr-2"></i> 2023/2024</li>
+                            <li><i class="fas fa-tachometer-alt mr-2"></i> 5.000 km</li>
+                        </ul>
+                        <button class="w-full bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white font-bold py-2 rounded hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-colors">Tenho Interesse</button>
+                    </div>
+                </div>
+
+                <!-- Carro 6 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?ixlib=rb-4.0.3&w=600&q=80" alt="Land Rover" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Range Rover Velar</h3>
+                        <p class="text-brand font-bold text-2xl mb-4">R$ 590.000</p>
+                        <ul class="text-sm text-gray-600 dark:text-gray-400 mb-6 space-y-2">
+                            <li><i class="fas fa-calendar-alt mr-2"></i> 2022/2023</li>
+                            <li><i class="fas fa-tachometer-alt mr-2"></i> 18.200 km</li>
+                        </ul>
+                        <button class="w-full bg-gray-900 dark:bg-gray-100 dark:text-gray-900 text-white font-bold py-2 rounded hover:bg-brand dark:hover:bg-brand dark:hover:text-white transition-colors">Tenho Interesse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="py-20 bg-gray-200 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&w=800&q=80" alt="Fachada da loja" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 uppercase tracking-wide">Quem Somos</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                        A <span class="font-bold text-brand">AutoMotors</span> atua no mercado automotivo há mais de 15 anos, sendo referência na venda de veículos premium, esportivos e sedans de luxo. 
+                    </p>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        Nosso compromisso é entregar não apenas um carro, mas a realização de um sonho. Todos os nossos veículos passam por um rigoroso processo de vistoria cautelar, garantindo procedência, qualidade e tranquilidade para você e sua família.
+                    </p>
+                    <ul class="space-y-3 font-semibold text-gray-800 dark:text-gray-200">
+                        <li><i class="fas fa-check-circle text-brand mr-2"></i> Vistoria Cautelar Aprovada</li>
+                        <li><i class="fas fa-check-circle text-brand mr-2"></i> Garantia de 1 ano motor e câmbio</li>
+                        <li><i class="fas fa-check-circle text-brand mr-2"></i> Melhores taxas de financiamento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-wide">Fale Conosco</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <!-- Informações de Contato -->
+                <div class="md:w-1/3 bg-brand text-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">Nossos Canais</h3>
+                    <p class="mb-8 text-white/80">Entre em contato para agendar um test drive ou tirar suas dúvidas com nossos consultores.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Endereço</h4>
+                                <p class="text-sm text-white/80">Av. das Américas, 1000<br>Barra da Tijuca, RJ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Telefone / WhatsApp</h4>
+                                <p class="text-sm text-white/80">(21) 99999-0000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">E-mail</h4>
+                                <p class="text-sm text-white/80">contato@automotors.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="md:w-2/3 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg transition-colors duration-300">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Nome Completo</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-colors" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">E-mail</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-colors" placeholder="seu@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Assunto</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-colors" placeholder="Ex: Interesse no Porsche Macan">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Mensagem</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-colors" placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition-colors text-lg">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 AutoMotors. Todos os direitos reservados.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Customizado -->
+    <script src="script.js"></script>
+</body>
+</html>

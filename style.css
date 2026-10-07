@@ -1,0 +1,10 @@
+/* Rolagem suave (Smooth Scrolling) ao clicar nos links do menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Você pode adicionar estilos extras ou customizações pessoais aqui embaixo caso queira */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
